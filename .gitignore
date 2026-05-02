@@ -1,0 +1,20 @@
+# AI Model Files (Too big for GitHub - 500MB+)
+trained_model/
+results/
+logs/
+
+# Python Cache & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+.venv/
+
+# Dataset & HuggingFace Cache
+.cache/
+.huggingface/
+
+# System Files
+.DS_Store
+Thumbs.db

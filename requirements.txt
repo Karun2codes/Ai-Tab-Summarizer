@@ -1,0 +1,9 @@
+transformers
+datasets
+torch
+fastapi
+uvicorn
+rouge-score
+pydantic
+evaluate
+accelerate

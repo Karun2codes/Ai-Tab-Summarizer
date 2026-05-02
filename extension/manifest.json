@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "AI Multi-Tab Summarizer",
+  "version": "1.0",
+  "description": "Summarizes content from all open tabs using AI.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

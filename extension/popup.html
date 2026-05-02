@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Summarizer</title>
+    <style>
+        body {
+            width: 350px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-top: 0;
+            text-align: center;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        button {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+        #results {
+            margin-top: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+        .summary-item {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .summary-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #34495e;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .summary-text {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        .loader {
+            text-align: center;
+            display: none;
+            color: #3498db;
+            font-style: italic;
+        }
+        .badge {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Multi-Tab Summarizer</h2>
+    
+    <div class="btn-container">
+        <button id="currentTabBtn">Summarize Current Tab</button>
+        <button id="combinedBtn">Combined Summary (All Tabs)</button>
+    </div>
+
+    <div id="loader" class="loader">Processing... Please wait</div>
+
+    <div id="results">
+        <!-- Results will be injected here -->
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
