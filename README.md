@@ -1,4 +1,4 @@
-# AI Multi-Tab Summarizer (Final Year Project)
+# AI Multi-Tab Summarizer 
 
 A beginner-friendly Chrome extension project that extracts text from multiple open tabs and generates AI summaries using a custom-trained BART model.
 
